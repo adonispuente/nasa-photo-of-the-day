@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from "react";
 import "./App.css";
 import axios from "axios";
-import Bebop from "./BigCard";
+import Bebop from "./Bebop";
+import Headers from "./Header";
 function MainCard() {
   const [nasa, setNasa] = useState([]);
   useEffect(() => {
@@ -10,7 +11,7 @@ function MainCard() {
         "https://api.nasa.gov/planetary/apod?api_key=Uqb7Xj3AUngMG9kUuUIM5iNlQ1wcvsXPEfuzrA6b"
       )
       .then(response => {
-        console.log(response.data);
+        console.log("data im getting from api", response.data);
 
         setNasa(response.data);
       })
@@ -20,6 +21,7 @@ function MainCard() {
   }, []);
   return (
     <div>
+      {/* <Headers /> */}
       <Bebop
         date={nasa.date}
         explanation={nasa.explanation}
