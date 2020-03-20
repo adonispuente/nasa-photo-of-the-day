@@ -8,6 +8,9 @@ const Background = styled.section`
   width: 100%;
   object-fit: cover;
   background-repeat: no-repeat;
+  background-size: cover;
+  background-repeat: no-repeat;
+  overflow-x: hidden;
 `;
 
 const Header = styled.img`
